@@ -28,10 +28,6 @@ let inputNames =document.createElement("input")
 document.body.appendChild(inputNames)
 inputNames.placeholder = "Enter name:"
 
-// let saveNames = document.createElement("button")
-// document.body.appendChild(saveNames)
-// saveNames.innerHTML= "save";
-// saveNames.addEventListener("click" ,arrayNamesFunc)
 
 
 let userNames = inputNames.value;
@@ -43,9 +39,31 @@ function arrayNamesFunc (evenTe) {
     if (arrayNames.length < 10){
         arrayNames.push(inputNames.value);
         arrayNames.sort()
+        
     }
+
     console.log(arrayNames);
 }
+const stringAraay = arrayNames.toString();
+const joinArray = arrayNames.join("-")
+console.log(joinArray);
 }
 
-functin
+let inputAges =document.createElement("input")
+document.body.appendChild(inputAges)
+inputAges.type = "number";
+inputAges.placeholder = "Enter your age:";
+let saveAgess = document.createElement("button")
+document.body.appendChild(saveAgess)
+saveAgess.innerHTML= "save";
+saveAgess.addEventListener("click" ,ageArrayFunc)
+
+    let ageArray = []
+function ageArrayFunc () {
+        
+        for (let i = 0 ; i< 10; i++){
+            ageArray.push(Math.floor(Math.random(inputAges.value)*100))
+            ageArray.sort((a,b)=> b-a)
+        }
+        console.log(ageArray);   
+}
