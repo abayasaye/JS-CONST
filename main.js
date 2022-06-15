@@ -22,12 +22,30 @@ arrayFunc (numberArray.push("9", "5" , "3" , "1"))
     console.log(numbersArray);
 }
 numbersFunc (numbersArray.push("3" , "7" , "11" , "22"))
-
+ 
 
 let inputNames =document.createElement("input")
 document.body.appendChild(inputNames)
-function arrayNamesFunc () {
+inputNames.placeholder = "Enter name:"
+
+// let saveNames = document.createElement("button")
+// document.body.appendChild(saveNames)
+// saveNames.innerHTML= "save";
+// saveNames.addEventListener("click" ,arrayNamesFunc)
 
 
+let userNames = inputNames.value;
+const arrayNames = []
+function arrayNamesFunc (evenTe) {
+    if (evenTe.key == "Enter") {
+        
+   
+    if (arrayNames.length < 10){
+        arrayNames.push(inputNames.value);
+        arrayNames.sort()
+    }
+    console.log(arrayNames);
 }
-arrayNamesFunc ()
+}
+
+functin
